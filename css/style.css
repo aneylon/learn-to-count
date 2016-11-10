@@ -1,3 +1,11 @@
 * {
   border: solid green 1px;
 }
+
+.correct {
+  background-color: lightgreen;
+}
+
+.incorrect {
+  background-color: lightsalmon;
+}

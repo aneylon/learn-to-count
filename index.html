@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <label for="">Places</label><input type="text" id="length" value="1">
+  <label>Places</label><input type="text" id="length" placeholder="1">
   <div>
     <select onChange="selected(this.value)">
       <option value=""> - select a language - </option>
@@ -20,10 +20,11 @@
   <div>
     <label>Show Pronunciation</label><input type="checkbox" id="showPro">
   </div>
-  <div id="selectedLanguage">日本語</div>
-  <div id="number">一</div>
-  <div id="pronunciation">いち</div>
-  <input type="text" id="answer">
+  <div id="selectedLanguage"> - Pick a language to start - </div>
+  <div id="number"> - Number - </div>
+  <div id="pronunciation"> - Pronounciation - </div>
+  <input type="text" id="answer" placeholder="type your answer here" onkeypress="LearnToCount.check(event)">
+  <div id="checked"> - checked - </div>
 
   <script src="js/app.js" charset="utf-8"></script>
   <script src="lang/japanese.js" charset="utf-8"></script>
