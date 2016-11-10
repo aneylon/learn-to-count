@@ -8,19 +8,26 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <label for="">Places</label><input type="text" id="length" value="1">
   <div>
-    <select class="" name="">
-      <option value="日本語">日本語</option>
-      <option value="中文">中文</option>
-      <option value="한국어">한국어</option>日本語
+    <select onChange="selected(this.value)">
+      <option value=""> - select a language - </option>
+      <option value="japanese">日本語</option>
+      <option value="chinese">中文</option>
+      <option value="korean">한국어</option>日本語
     </select>
   </div>
   <div>
-    <label>Show Pronouncation</label><input type="checkbox" id="showPro">
+    <label>Show Pronunciation</label><input type="checkbox" id="showPro">
   </div>
-  <div id="number"></div>
+  <div id="selectedLanguage">日本語</div>
+  <div id="number">一</div>
+  <div id="pronunciation">いち</div>
   <input type="text" id="answer">
 
   <script src="js/app.js" charset="utf-8"></script>
+  <script src="lang/japanese.js" charset="utf-8"></script>
+  <script src="lang/korean.js" charset="utf-8"></script>
+  <script src="lang/chinese.js" charset="utf-8"></script>
 </body>
 </html>

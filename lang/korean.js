@@ -1,3 +1,3 @@
 var korean = {
-
+  one:'il'
 }
