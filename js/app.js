@@ -8,7 +8,10 @@ var LearnToCount = (function(){
       return Math.floor(Math.random() * (max - min + 1) + min)
     },
     makeNumber: function(length){
-      var output = String(this.pickRandom(9,1))
+      length = this.pickRandom(length,1)
+      var min = 1
+      if(length === 1) min = 0
+      var output = String(this.pickRandom(9,min))
       while(length > 1){
         output += this.pickRandom(9)
         length--
@@ -37,7 +40,6 @@ var LearnToCount = (function(){
         length = 1
         lengthField.value = ''
       }
-
       return length
     },
     next: function(){
