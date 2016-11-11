@@ -2,6 +2,15 @@
 var LearnToCount = (function(){
   return {
     currentNumber: 0,
+    selected: function(value){
+      if ( value === '日本語')
+        console.log(japanese)
+      else
+        console.log(value)
+    },
+    pickedLang: function(){
+      console.log('picked')
+    },
     pickRandom: function(max, min){
       max = max || 2
       min = min || 0
@@ -18,15 +27,6 @@ var LearnToCount = (function(){
       }
       return output
     },
-    selected: function(value){
-      if ( value === '日本語')
-        console.log(japanese)
-      else
-        console.log(value)
-    },
-    pickedLang: function(){
-      console.log('picked')
-    },
     setText: function(elementID, text){
       document.getElementById(elementID).innerHTML = text
     },
@@ -42,11 +42,11 @@ var LearnToCount = (function(){
       }
       return length
     },
-    next: function(){
+    nextNumber: function(){
       this.currentNumber = this.makeNumber(this.getLength())
       this.setText('number',this.currentNumber)
     },
-    check: function(event){
+    checkNumber: function(event){
       if(event.which === 13) {
         var answerField = document.getElementById('answer')
         var answer = answerField.value
@@ -56,9 +56,9 @@ var LearnToCount = (function(){
         } else {
           this.addClassById('checked', 'incorrect')
         }
-        this.next()
+        this.nextNumber()
       }
     }
   }
 })()
-LearnToCount.next()
+LearnToCount.nextNumber()
