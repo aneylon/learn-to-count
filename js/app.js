@@ -7,6 +7,8 @@ var LearnToCount = (function(){
         console.log(japanese)
       else
         console.log(value)
+
+      this.nextNumber();
     },
     pickedLang: function(){
       console.log('picked')
@@ -61,4 +63,3 @@ var LearnToCount = (function(){
     }
   }
 })()
-LearnToCount.nextNumber()

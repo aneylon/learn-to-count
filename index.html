@@ -8,23 +8,27 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <label>Places</label><input type="text" id="length" placeholder="1">
-  <div>
-    <select onChange="selected(this.value)">
-      <option value=""> - select a language - </option>
-      <option value="japanese">日本語</option>
-      <option value="chinese">中文</option>
-      <option value="korean">한국어</option>日本語
-    </select>
+  <div id="app">
+    <div>
+      <select onChange="LearnToCount.selected(this.value)">
+        <option value=""> - select a language - </option>
+        <option value="korean">한국어</option>
+        <option value="japanese">日本語</option>
+        <option value="chinese">中文</option>
+      </select>
+    </div>
+
+    <p>Places</p><input type="text" id="length" placeholder="1">
+
+    <div>
+      <label>Show Pronunciation</label><input type="checkbox" id="showPro">
+    </div>
+
+    <div id="number"> &nbsp; </div>
+    <div id="pronunciation"> &nbsp; </div>
+    <input type="text" id="answer" placeholder="answer?" onkeypress="LearnToCount.checkNumber(event)">
+    <div id="checked"> &nbsp; </div>
   </div>
-  <div>
-    <label>Show Pronunciation</label><input type="checkbox" id="showPro">
-  </div>
-  <div id="selectedLanguage"> - Pick a language to start - </div>
-  <div id="number"> - Number - </div>
-  <div id="pronunciation"> - Pronounciation - </div>
-  <input type="text" id="answer" placeholder="type your answer here" onkeypress="LearnToCount.checkNumber(event)">
-  <div id="checked"> - checked - </div>
 
   <script src="js/app.js" charset="utf-8"></script>
   <script src="lang/japanese.js" charset="utf-8"></script>

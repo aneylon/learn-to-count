@@ -1,11 +1,71 @@
 * {
-  border: solid green 1px;
+  text-align: center;
+  color: #a1874d;
+  padding: 3px;
+  margin: 3px;
+}
+
+body {
+  margin-top: 75px;
+  background-color: #fffbf1;
+}
+
+select {
+  border: none;
+  background-color: #fff4db;
+  border-radius: 5px;
+  font-size: 150%;
+}
+
+option {
+  background-color: #fffbf1;
+}
+
+input {
+  border: none;
+  border-bottom: dashed dimgrey 2px;
+  border-radius: 5px;
+  background-color: #fed;
+}
+
+#app {
+  background-color: #e4d2aa;
+  max-width: 650px;
+  margin: auto;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+#number {
+  font-size: 450%;
+  color: dimgrey;
+
+}
+
+#pronunciation {
+  visibility: hidden;
+}
+
+#answer {
+  padding: 10px;
+  margin: 10px;
+  font-size: 150%;
 }
 
 .correct {
   background-color: lightgreen;
+  border: solid white 3px;
 }
 
 .incorrect {
   background-color: lightsalmon;
+  border: solid white 3px;
 }
+
+/*
+fffbf1
+fff4db
+e4d2aa
+c1aa76
+a1874d
+*/
