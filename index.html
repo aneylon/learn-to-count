@@ -10,24 +10,30 @@
 <body>
   <div id="app">
     <div>
+      <h1>Practice Counting in:</h1>
       <select onChange="LearnToCount.selected(this.value)">
         <option value=""> - select a language - </option>
         <option value="korean">한국어</option>
+        <option value="korean">한국어（漢字）</option>
         <option value="japanese">日本語</option>
-        <option value="chinese">中文</option>
+        <option value="japanese">日本語（ひらがな）</option>
+        <option value="chinese">中文（Pīnyīn）</option>
+        <option value="chinese">中文（ㄅㄆㄇㄈ）</option>
       </select>
     </div>
-
-    <p>Places</p><input type="text" id="length" placeholder="1">
-
-    <div>
-      <label>Show Pronunciation</label><input type="checkbox" id="showPro">
-    </div>
-
+    <p>Places</p><input type="text" id="length" placeholder="1 - 16">
     <div id="number"> &nbsp; </div>
-    <div id="pronunciation"> &nbsp; </div>
+    <div id="pronunciation" class="invisible"> &nbsp; </div>
+    <div>
+      <label>Show Pronunciation</label><input type="checkbox" id="showPronounciation" onchange="LearnToCount.showPronounciation()">
+    </div>
     <input type="text" id="answer" placeholder="answer?" onkeypress="LearnToCount.checkNumber(event)">
     <div id="checked"> &nbsp; </div>
+  </div>
+  <div>
+    <p>
+      check out the code on <a href="https://github.com/aneylon/learn-to-count/">github</a>
+    </p>
   </div>
 
   <script src="js/app.js" charset="utf-8"></script>

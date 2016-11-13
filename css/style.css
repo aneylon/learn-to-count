@@ -3,6 +3,7 @@
   color: #a1874d;
   padding: 3px;
   margin: 3px;
+  font-family: Arial, sans-serif;
 }
 
 body {
@@ -15,6 +16,7 @@ select {
   background-color: #fff4db;
   border-radius: 5px;
   font-size: 150%;
+  text-align-last: center;
 }
 
 option {
@@ -42,14 +44,28 @@ input {
 
 }
 
-#pronunciation {
-  visibility: hidden;
-}
-
 #answer {
   padding: 10px;
   margin: 10px;
   font-size: 150%;
+}
+
+#checked {
+  width: 33%;
+  margin: auto;
+  padding: 15px;
+  font-size: 200%;
+  color: white;
+  border-radius: 5px;
+  font-weight: bolder;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
 }
 
 .correct {
