@@ -68,7 +68,10 @@ var LearnToCount = (function(){
       return length
     },
     nextNumber: function(){
-      this.currentNumber = this.makeNumber(this.getLength())
+      var prevNumber = this.currentNumber
+      while(prevNumber === this.currentNumber){
+        this.currentNumber = this.makeNumber(this.getLength())
+      }
       this.currentNumberText = this.numberToText(this.currentNumber)
       this.setText('number',this.currentNumberText[0])
       this.setText('pronunciation',this.currentNumberText[1])
