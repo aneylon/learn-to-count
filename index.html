@@ -8,20 +8,22 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div id="app">
+  <header>
+    <h1 id="title">Practice Counting in:</h1>
+  </header>
+  <section id="app">
     <div>
-      <h1>Practice Counting in:</h1>
       <select onChange="LearnToCount.selected(this.value)">
         <option value=""> - select a language - </option>
-        <option value="korean">한국어</option>
-        <option value="korean">한국어（漢字）</option>
-        <option value="japanese">日本語</option>
-        <option value="japanese">日本語（ひらがな）</option>
-        <option value="chinese">中文（Pīnyīn）</option>
-        <option value="chinese">中文（ㄅㄆㄇㄈ）</option>
+        <option value="koreanHangul">한국어</option>
+        <option value="koreanHanja">한국어（漢字）</option>
+        <option value="japaneseKanji">日本語</option>
+        <option value="japaneseHiragana">日本語（ひらがな）</option>
+        <option value="chinesePinyin">中文（Pīnyīn）</option>
+        <option value="chineseBopomofo">中文（ㄅㄆㄇㄈ）</option>
       </select>
     </div>
-    <p>Places</p><input type="text" id="length" placeholder="1 - 16">
+    <input type="text" id="length" placeholder=" length : 1 - 16">
     <div id="number"> &nbsp; </div>
     <div id="pronunciation" class="invisible"> &nbsp; </div>
     <div>
@@ -29,17 +31,25 @@
     </div>
     <input type="text" id="answer" placeholder="answer?" onkeypress="LearnToCount.checkNumber(event)">
     <div id="checked"> &nbsp; </div>
-  </div>
-  <div>
+  </section>
+  <footer>
     <p>
-      check out the code on <a href="https://github.com/aneylon/learn-to-count/">github</a>
+      check out the code on <a href="https://github.com/aneylon/learn-to-count/">github</a>.
+      <br>
+      open an <a href="https://github.com/aneylon/learn-to-count/issues">issue</a> if you find a bug.
+      <br>
+      contact me <a href="http://www.arlen-neylon.com/#about">directly</a>.
+      <br>
+      or fork the repo, fix it yourself and submit a pull request!
     </p>
-  </div>
+  </footer>
 
+  <script src="lang/japaneseKanji.js" charset="utf-8"></script>
+  <script src="lang/japaneseHiragana.js" charset="utf-8"></script>
+  <script src="lang/koreanHangul.js" charset="utf-8"></script>
+  <script src="lang/koreanHanja.js" charset="utf-8"></script>
+  <script src="lang/chinesePinyin.js" charset="utf-8"></script>
+  <script src="lang/chineseBopomofo.js" charset="utf-8"></script>
   <script src="js/app.js" charset="utf-8"></script>
-  <script src="lang/japanese.js" charset="utf-8"></script>
-  <script src="lang/korean.js" charset="utf-8"></script>
-  <script src="lang/chinese.js" charset="utf-8"></script>
-  <script src="lang/test.js" charset="utf-8"></script>
 </body>
 </html>
