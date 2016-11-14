@@ -1,7 +1,9 @@
 # learn-to-count
 Vanilla JS app for learning to count in other languages
 
-Learning to count in new languages is hard.
+http://www.arlen-neylon.com/learn-to-count
+
+### Learning to count in new languages can be hard
 
 I made this app to try and make it easier.
 
@@ -10,4 +12,8 @@ Current languages
 * Korean
 * Chinese
 
-I think it's okay, but of course it could be better, so if you want to make fix or addition just submit a pull request and if it improves the app in any way I'll gladly merge it in!
+Not a bad start, but there is still a lot of room for improvement.
+
+Open a issue if you see something that needs fixing.
+
+Or feel free to clone the repo, fix it and make a pull request!
