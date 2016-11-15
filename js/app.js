@@ -102,71 +102,49 @@ var LearnToCount = (function(){
       }
       if(parts[3]){
         var stringed = padZeros(parts[3].toString())
-        var toTxt = ''
-        var pro = ''
-        toTxt += this.currentLang.thousand[Number(stringed[0])][0]
-        toTxt += this.currentLang.hundred[Number(stringed[1])][0]
-        toTxt += this.currentLang.ten[Number(stringed[2])][0]
-        toTxt += this.currentLang.one[Number(stringed[3])][0]
-        toTxt += this.currentLang.suffix[3][0]
-        txtNum += toTxt
-        pro += this.currentLang.thousand[Number(stringed[0])][1]
-        pro += this.currentLang.hundred[Number(stringed[1])][1]
-        pro += this.currentLang.ten[Number(stringed[2])][1]
-        pro += this.currentLang.one[Number(stringed[3])][1]
-        pro += this.currentLang.suffix[3][1]
-        pronounce += pro
+        var composed = this.composeStrings(stringed, 3)
+        txtNum += composed.txt
+        pronounce += composed.pro
       }
       if(parts[2]){
         var stringed = padZeros(parts[2].toString())
-        var toTxt = ''
-        var pro = ''
-        toTxt += this.currentLang.thousand[Number(stringed[0])][0]
-        toTxt += this.currentLang.hundred[Number(stringed[1])][0]
-        toTxt += this.currentLang.ten[Number(stringed[2])][0]
-        toTxt += this.currentLang.one[Number(stringed[3])][0]
-        toTxt += this.currentLang.suffix[2][0]
-        txtNum += toTxt
-        pro += this.currentLang.thousand[Number(stringed[0])][1]
-        pro += this.currentLang.hundred[Number(stringed[1])][1]
-        pro += this.currentLang.ten[Number(stringed[2])][1]
-        pro += this.currentLang.one[Number(stringed[3])][1]
-        pro += this.currentLang.suffix[2][1]
-        pronounce += pro
+        var composed = this.composeStrings(stringed, 2)
+        txtNum += composed.txt
+        pronounce += composed.pro
       }
       if(parts[1]){
         var stringed = padZeros(parts[1].toString())
-        var toTxt = ''
-        var pro = ''
-        toTxt += this.currentLang.thousand[Number(stringed[0])][0]
-        toTxt += this.currentLang.hundred[Number(stringed[1])][0]
-        toTxt += this.currentLang.ten[Number(stringed[2])][0]
-        toTxt += this.currentLang.one[Number(stringed[3])][0]
-        toTxt += this.currentLang.suffix[1][0]
-        txtNum += toTxt
-        pro += this.currentLang.thousand[Number(stringed[0])][1]
-        pro += this.currentLang.hundred[Number(stringed[1])][1]
-        pro += this.currentLang.ten[Number(stringed[2])][1]
-        pro += this.currentLang.one[Number(stringed[3])][1]
-        pro += this.currentLang.suffix[1][1]
-        pronounce += pro
+        var composed = this.composeStrings(stringed, 1)
+        txtNum += composed.txt
+        pronounce += composed.pro
       }
       if(parts[0]){
         var stringed = padZeros(parts[0].toString())
-        var toTxt = ''
-        var pro = ''
-        toTxt += this.currentLang.thousand[Number(stringed[0])][0]
-        toTxt += this.currentLang.hundred[Number(stringed[1])][0]
-        toTxt += this.currentLang.ten[Number(stringed[2])][0]
-        toTxt += this.currentLang.one[Number(stringed[3])][0]
-        txtNum += toTxt
-        pro += this.currentLang.thousand[Number(stringed[0])][1]
-        pro += this.currentLang.hundred[Number(stringed[1])][1]
-        pro += this.currentLang.ten[Number(stringed[2])][1]
-        pro += this.currentLang.one[Number(stringed[3])][1]
-        pronounce += pro
+        var composed = this.composeStrings(stringed, 0)
+        txtNum += composed.txt
+        pronounce += composed.pro
       }
       return [txtNum, pronounce]
+    },
+    composeStrings: function(numberStr, place){
+      var txt = '', pro = ''
+
+      txt += this.currentLang.thousand[Number(numberStr[0])][0]
+      txt += this.currentLang.hundred[Number(numberStr[1])][0]
+      txt += this.currentLang.ten[Number(numberStr[2])][0]
+      txt += this.currentLang.one[Number(numberStr[3])][0]
+      txt += this.currentLang.suffix[place][0]
+
+      pro += this.currentLang.thousand[Number(numberStr[0])][1]
+      pro += this.currentLang.hundred[Number(numberStr[1])][1]
+      pro += this.currentLang.ten[Number(numberStr[2])][1]
+      pro += this.currentLang.one[Number(numberStr[3])][1]
+      pro += this.currentLang.suffix[place][1]
+
+      return {
+        txt: txt,
+        pro: pro
+      }
     },
     checkNumber: function(event){
       if(event.which === 13) {
