@@ -13,6 +13,8 @@ var LearnToCount = (function(){
         this.currentLang = koreanHangul
       if(value == 'koreanHanja')
         this.currentLang = koreanHanja
+      if(value == 'koreanNative')
+        this.currentLang = koreanNative
       if(value == 'japaneseKanji')
         this.currentLang = japaneseKanji
       if(value == 'japaneseHiragana')
